@@ -1,0 +1,10 @@
+#!/bin/bash
+export NODE_OPTIONS="${NODE_OPTIONS:---max-old-space-size=1024}"
+
+standard --version
+
+if [ $# -eq 0 ]; then
+    standard
+else
+    standard "$@"
+fi
